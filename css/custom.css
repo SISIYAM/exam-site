@@ -1,0 +1,15 @@
+  /* responsive cke-editor uploaded image */
+  .card-body .questionPart img {
+    max-width: 100%;
+    height: auto !important;
+  }
+
+  .card-body .questionPart .inputGroup {
+    max-width: 100%;
+    height: auto !important;
+  }
+
+  .solution img {
+    max-width: 100%;
+    height: auto !important;
+  }
