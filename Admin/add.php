@@ -45,6 +45,16 @@
                           </div>
                         </div>
 
+                        <div class="col-4">
+                          <div class="form-group">
+                            <label for="first-name-vertical">Exam Type <span>*</span></label>
+                            <select name="exam_type" id="" class="form-control">
+                              <option value="1">Live Exam</option>
+                              <option value="0">Practice Exam</option>
+                            </select>
+                          </div>
+                        </div>
+
                         <div class="col-12">
                           <label for="short-description-id-vertical">Duration*</label>
                           <div class="d-flex my-2">

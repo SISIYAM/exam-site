@@ -97,10 +97,11 @@ if (isset($_POST['submitExamBtn'])) {
   $exam_end_time = $_POST['end_time'];
   $mcq_marks = $_POST['mcq_marks'];
   $written_marks = $_POST['written_marks'];
+  $exam_type = $_POST['exam_type'];
   $added_by = $_SESSION['username'];
   
-    $sql = "INSERT INTO `exam`(`exam_name`, `exam_id`, `duration`, `exam_start`, `exam_start_time`, `exam_end`,`exam_end_time`,`mcq_marks`, `written_marks`,`added_by`) 
-    VALUES ('$exam_name','$exam_id','$duration','$exam_start','$exam_start_time','$exam_end','$exam_end_time','$mcq_marks','$written_marks','$added_by')";
+    $sql = "INSERT INTO `exam`(`exam_name`, `exam_id`, `duration`, `exam_start`, `exam_start_time`, `exam_end`,`exam_end_time`,`mcq_marks`, `written_marks`,`type`,`added_by`) 
+    VALUES ('$exam_name','$exam_id','$duration','$exam_start','$exam_start_time','$exam_end','$exam_end_time','$mcq_marks','$written_marks','$exam_type','$added_by')";
     $query = mysqli_query($con, $sql);
   
     if ($query) {
