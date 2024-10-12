@@ -566,6 +566,48 @@
         </div>
     </div>
     <?php
+    }elseif(isset($_GET['course'])){
+      ?>
+      <div class="page-heading">
+
+<!-- Basic Vertical form layout section start -->
+<section id="basic-vertical-layouts">
+  <div class="row match-height">
+    <div class="">
+      <div class="card">
+        <div class="card-header">
+          <h4 class="card-title">Add Course</h4>
+        </div>
+        <div class="card-content">
+          <div class="card-body">
+            <form action="" method="post" enctype="multipart/form-data" class="form form-vertical">
+              <div class="form-body">
+                <div class="row">
+                  <div class="col-12">
+                    <div class="form-group">
+                      <label for="first-name-vertical">Course Name <span>*</span></label>
+                      <input type="text" id="first-name-vertical" class="form-control" name="exam_name"
+                        placeholder="Exam Name" required>
+                    </div>
+                  </div>
+
+                 
+
+                  <div class="col-12 d-flex justify-content-end">
+                    <button type="submit" name="submitExamBtn" class="btn btn-primary me-1 mb-1">Submit</button>
+                    <button type="reset" class="btn btn-light-secondary me-1 mb-1">Reset</button>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+      <?php
     }else {
       ?>
     <div id="error">

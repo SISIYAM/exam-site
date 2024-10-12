@@ -69,6 +69,31 @@
             </a>
           </li>
 
+          <li class="sidebar-item  has-sub">
+            <a href="#" class='sidebar-link'>
+              <i class="bi bi-stack"></i>
+              <span>Manage Courses</span>
+            </a>
+
+            <ul class="submenu ">
+
+              <li class="submenu-item  ">
+                <a href="list.php?courses" class="sidebar-link"><i class="bi bi-list-columns-reverse"></i>
+                  <span>Course List</span></a>
+
+              </li>
+
+              <li class="submenu-item  ">
+                <a href="add.php?course" class="sidebar-link"><i class="bi bi-plus-circle"></i>
+                  <span>Add Course</span></a>
+
+              </li>
+
+
+            </ul>
+
+
+          </li>
 
           <li class="sidebar-item  has-sub">
             <a href="#" class='sidebar-link'>

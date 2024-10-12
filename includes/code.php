@@ -53,7 +53,7 @@ if(isset($_POST['LoginBtn'])){
   $username = $_POST['username'];
   $password = $_POST['password'];
 
-    $username_search = " select * from students where username='$username'";
+    $username_search = " select * from students where username='$username' OR email='$username'";
     $query = mysqli_query($con,$username_search);
 
     $username_count = mysqli_num_rows($query);
@@ -78,7 +78,7 @@ location.replace("index.php");
          }
 
      }else{
-      $_SESSION['errorMsg'] = "Invalid Username";
+      $_SESSION['errorMsg'] = "Invalid Username or email";
      }
 
 }

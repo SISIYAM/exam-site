@@ -537,6 +537,75 @@ include 'includes/head.php';
 
 
     <?php
+    }elseif (isset($_GET['courses'])) {
+      ?>
+    <div class="page-heading">
+      <!-- Basic Tables start -->
+      <section class="section">
+        <div class="card">
+          <div class="card-header">
+            <h5 class="card-title">
+              Course List
+            </h5>
+          </div>
+          <div class="card-body">
+            <div class="table-responsive">
+              <?php
+                  $no = 1;
+                  $select = mysqli_query($con, "SELECT * FROM courses ORDER BY id DESC");
+                  if(mysqli_num_rows($select) > 0){
+                    ?>
+              <table class="table" id="table1">
+                <thead>
+                  <tr>
+                    <th>#</th>
+                    <th>Course ID</th>
+                    <th>Course name</th>
+                    <th>Status</th>
+                    <th>Price</th>
+                    <th>Author</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <?php
+                  while($row = mysqli_fetch_array($select)){
+                    ?>
+                  <tr>
+                    <td><?=$no?></td>
+                    <td><?=$row['course_id']?></td>
+                    <td><?=$row['course_name']?></td>
+                    <td><?=$row['course_price']?></td>
+                    <td><?=$row['author']?></td>
+                    <td><button class="badge bg-danger border-0 deleteAdminBtn" value="<?=$row['id']?>">Delete</button>
+                    </td>
+                  </tr>
+                  <?php
+                   $no++;
+                  }
+                  ?>
+              </table>
+              <?php
+                  }else{
+                   ?>
+              <tr>
+
+                <p class="alert alert-danger"> No Result Found!</p>
+
+              </tr>
+              <?php 
+                  }
+                  ?>
+            </div>
+          </div>
+        </div>
+
+      </section>
+      <!-- Basic Tables end -->
+    </div>
+
+
+    <?php
     }else {
       ?>
     <div id="error">
